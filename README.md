@@ -13,6 +13,15 @@
 
 > Your AI-Powered Dev Team, Right in Your Editor
 
+## What's New in v3.51.1 (Custom Build — Embedding Fix)
+
+- **Fixed:** OpenAI Compatible embedder now has 60s timeout — prevents infinite hangs on unresponsive servers
+- **Fixed:** 5xx server errors (500-599) now retry with exponential backoff instead of failing immediately
+- **Fixed:** Proper error messages for 502/503/504 instead of generic "configuration error"
+- **Added:** AbortController with timeout converts network hangs into clear HTTP 504 Gateway Timeout errors
+- **Added:** i18n translations for new error messages in 18 languages
+- **Added:** 15 new unit tests for timeout and retry logic
+
 ## What's New in v3.51.0
 
 - Add support for OpenAI GPT-5.4 and GPT-5.3 Chat Latest so you can use the newest OpenAI chat models in Roo Code.
